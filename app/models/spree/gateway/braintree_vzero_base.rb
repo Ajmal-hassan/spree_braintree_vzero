@@ -25,7 +25,7 @@ module Spree
     end
 
     def provider
-      Braintree::Configuration.environment = preferred_server.to_sym
+      Braintree::Configuration.environment = 'sandbox'
       Braintree::Configuration.merchant_id = preferred_merchant_id
       Braintree::Configuration.public_key = preferred_public_key
       Braintree::Configuration.private_key = preferred_private_key
